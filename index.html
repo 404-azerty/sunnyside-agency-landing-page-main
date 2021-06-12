@@ -1,68 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Sunnyside agency landing page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Sunnyside agency landing page</title>
+  <meta name="description" content="Frontend Mentor | Sunnyside agency landing page">
+  <link rel="stylesheet" href="style.css" media="all">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap"
+    rel="stylesheet">
 </head>
-<body>
-  About
-  Services
-  Projects
-  Contact
 
-  We are creatives
+<body class="bg-primary text-center">
+  <header class="bg-header bg-bottom bg-cover md:bg-header-desktop h-screen" id="top">
+    <!-- navigation -->
+    <nav class="fixed top-0 z-50 w-full left-1/2 transform -translate-x-1/2 md:hidden">
+      <div class="bg-primary px-1 pt-4 pb-2 h-19 flex items-center justify-between">
+        <a href="#top">
+          <img class="sm:h-10" src="images/logo.svg" alt="Logo">
+        </a>
+        <div>
+          <button class="toggle-icon focus:outline-none" type="button">
+            <img class="sm:h-10" src="images/icon-hamburger.svg" alt="Menu icon">
+          </button>
+        </div>
+      </div>
 
-  Transform your brand
+      <div class="toggle-menu hidden px-4">
+        <div class="w-5 overflow-hidden ml-auto">
+          <div class="h-7 bg-white rotate-45 transform origin-bottom-left"></div>
+        </div>
+        <ul class="py-1 flex-col text-gray-400 text-sm p-1 bg-white shadow-md">
+          <li class="my-6"><a href="#about">About</a></li>
+          <li class="my-6"><a href="#services">Services</a></li>
+          <li class="my-6"><a href="#projects">Projects</a></li>
+          <li
+            class="font-serif my-6 uppercase text-gray-800 bg-secondary w-min m-auto py-4 px-6 rounded-full hover:text-gray-500 hover:bg-yellow-100 cursor-pointer">
+            Contact</li>
+        </ul>
+      </div>
+    </nav>
 
-  We are a full-service creative agency specializing in helping brands grow fast. 
-  Engage your clients through compelling visuals that do most of the marketing for you.
+    <!-- navigation desktop -->
+    <nav class="hidden maw-w-7xl px-4 pt-4 relative md:flex items-center justify-between">
+      <img src="images/logo.svg" alt="Logo">
+      <ul class="text-white text-sm p-1 flex items-center">
+        <li class="mr-10"><a href="#about">About</a></li>
+        <li class="mr-10"><a href="#services">Services</a></li>
+        <li class="mr-10"><a href="#projects">Projects</a></li>
+        <li
+          class="font-serif uppercase bg-white w-min m-auto py-3 px-6 rounded-full text-gray-800 hover:bg-yellow-100 cursor-pointer">
+          Contact</li>
+      </ul>
+    </nav>
 
-  Learn more
+    <h1 class="font-serif text-5xl text-white uppercase pt-44 mb-10 md:tracking-widest md:pt-20 md:mb-20">We
+      are
+      creatives</h1>
+    <img src="images/icon-arrow-down.svg" alt="Arrow down" class="block m-auto animate-bounce">
+  </header>
 
-  Stand out to the right audience
+  <main class="text-gray-800 bg-white">
+    <div class="md:flex flex-wrap" id="about">
+      <img src="images/mobile/image-transform.jpg" alt="Transform photo" class="block w-full md:hidden" width="750"
+        height="624">
+      <img src="images/desktop/image-transform.jpg" alt="Transform photo" class="hidden md:block md:w-1/2" width="720"
+        height="600">
+      <article class="py-12 px-6 md:w-1/2 md:order-first md:flex md:flex-col md:justify-center">
+        <div class="md:w-8/12 md:text-left md:m-auto">
+          <h2 class="font-serif text-3xl md:pr-20">Transform your brand</h2>
 
-  Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. 
+          <p class="text-gray-500 my-6">We are a full-service creative agency specializing in helping brands grow fast.
+            Engage your clients through
+            compelling visuals that do most of the marketing for you.</p>
 
-  Learn more
+          <div class="relative w-max px-2 m-auto pt-6 md:ml-0">
+            <a href="#"
+              class="absolute w-max left-1/2 bottom-0 transform -translate-x-1/2 md:left-2 md:translate-x-0 md:transform-none font-serif uppercase z-20">Learn
+              more</a>
+            <div
+              class="bg-yellow-200 rounded-full h-2 absolute w-32 left-1/2 bottom-0 transform -translate-x-1/2 z-10 md:left-0 md:translate-x-0 md:transform-none">
+            </div>
+          </div>
+        </div>
+      </article>
 
-  Graphic design
-  Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+      <img src="images/mobile/image-stand-out.jpg" alt="Glass photo" class="block w-full md:w-1/2 md:hidden" width="750"
+        height="624">
+      <img src="images/desktop/image-stand-out.jpg" alt="Glass photo" class="hidden md:block md:w-1/2" width="720"
+        height="600">
+      <article class="py-12 px-6 md:w-1/2 md:text-left md:flex md:flex-col md:justify-center">
+        <div class="md:w-8/12 md:text-left md:m-auto">
+          <h2 class="font-serif text-3xl md:w-8/12">Stand out to the right audience</h2>
 
-  Photography
-  Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+          <p class=" text-gray-500 my-6">Using a collaborative formula of designers,
+            researchers, photographers,
+            videographers, and copywriters, we’ll build and extend your brand in digital places.</p>
 
-  Client testimonials
+          <div class="relative w-max px-2 m-auto pt-6 md:ml-0">
+            <a href="#"
+              class="absolute w-max left-1/2 bottom-0 transform -translate-x-1/2 font-serif uppercase z-20 md:left-2 md:translate-x-0 md:transform-none">Learn
+              more</a>
+            <div
+              class="bg-red-200 rounded-full h-2 absolute w-32 left-1/2 bottom-0 transform -translate-x-1/2 z-10 md:left-0 md:translate-x-0 md:transform-none">
+            </div>
+          </div>
+        </div>
+      </article>
 
-  We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
-  Emily R.
-  Marketing Director
+      <div class="md:flex">
+        <div class="relative h-3/6 text-green-900 md:w-1/2 md:h-auto">
+          <img src="images/mobile/image-graphic-design.jpg" alt="Graphic design photo" class="block w-full md:hidden"
+            width="750" height="1200">
+          <img src="images/desktop/image-graphic-design.jpg" alt="Graphic design photo"
+            class="hidden md:block md:w-full" width="720" height="600">
+          <article class="absolute bottom-8 px-6 md:bottom-0 md:w-3/6 md:transform md:-translate-x-1/2 md:left-1/2"">
+            <h2 class=" font-serif text-3xl">Graphic design</h2>
+            <p class="mt-6 text-sm md:my-6">Great design makes you memorable. We deliver artwork that underscores your
+              brand
+              message and
+              captures
+              potential clients’ attention.</p>
+          </article>
+        </div>
 
-  Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
-  Thomas S.
-  Chief Operating Officer
+        <div class="relative h-3/6 text-gray-700 md:w-1/2 md:h-auto">
+          <img src="images/mobile/image-photography.jpg" alt="Graphic design photo" class="block w-full md:hidden"
+            width="750" height="1200">
+          <img src="images/desktop/image-photography.jpg" alt="Graphic design photo" class="hidden md:block md:w-full"
+            width="720" height="600">
+          <article class="absolute bottom-8 px-6 md:bottom-0 md:w-3/6 md:transform md:-translate-x-1/2 md:left-1/2">
+            <h2 class="font-serif text-3xl">Photography</h2>
+            <p class="my-6 text-sm">Increase your credibility by getting the most stunning, high-quality photos that
+              improve your business image.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
 
-  Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
-  Jennie F.
-  Business Owner
 
-  About
-  Services
-  Projects
-  Contact
+    <section class="pt-12 pb-16 px-6 text-gray-600 md:py-28" id="services">
+      <h2 class="font-serif uppercase tracking-widest text-gray-500">Client testimonials</h2>
 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+      <div class="md:grid grid-flow-col grid-cols-3 grid-rows-1 gap-9 md:mt-12">
+        <div class="my-8 md:my-0 ">
+          <figure>
+            <img src="images/image-emily.jpg" alt="Emily photo" class="block w-16 h-16 m-auto rounded-full mb-6">
+            <figcaption>We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines
+              were always hit.</figcaption>
+          </figure>
+          <div class="flex-col mt-4">
+            <span class="block font-serif text-gray-900">Emily R.</span>
+            <span class="block text-gray-500 text-sm mt-2">Marketing Director</span>
+          </div>
+        </div>
+
+        <div class="my-12 md:my-0">
+          <figure>
+            <img src="images/image-thomas.jpg" alt="Thomas photo" class="block w-16 h-16 m-auto rounded-full mb-6">
+            <figcaption>Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a
+              satisfying and enjoyable experience.</figcaption>
+          </figure>
+          <div class="flex-col mt-4">
+            <span class="block font-serif text-gray-900">Thomas S.</span>
+            <span class="block text-gray-500 text-sm mt-2">Chief Operating Officer</span>
+          </div>
+        </div>
+
+        <div>
+          <figure>
+            <img src="images/image-jennie.jpg" alt="Jennie photo" class="block w-16 h-16 m-auto rounded-full mb-6">
+            <figcaption>Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly
+              recommended!</figcaption>
+          </figure>
+          <div class="flex-col mt-4">
+            <span class="block font-serif text-gray-900">Jennie F.</span>
+            <span class="block text-gray-500 text-sm mt-2">Business Owner</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="flex flex-wrap" id="projects">
+      <img src="images/mobile/image-gallery-milkbottles.jpg" alt="Milk bottles photo" class="w-1/2 block md:hidden"
+        width="376" height="376">
+      <img src="images/mobile/image-gallery-orange.jpg" alt="Orange photo" class="w-1/2 block md:hidden" width="376"
+        height="376">
+      <img src="images/mobile/image-gallery-cone.jpg" alt="Cone photo" class="w-1/2 block md:hidden" width="376"
+        height="376">
+      <img src="images/mobile/image-gallery-sugar-cubes.jpg" alt="Sugar cube photo" class="w-1/2 block md:hidden"
+        width="376" height="376">
+      <img src="images/desktop/image-gallery-milkbottles.jpg" alt="Milk bottles photo" class="hidden w-1/4 md:block"
+        width="720" height="894">
+      <img src="images/desktop/image-gallery-orange.jpg" alt="Orange photo" class="hidden w-1/4 md:block" width="720"
+        height="894">
+      <img src="images/desktop/image-gallery-cone.jpg" alt="Cone photo" class="hidden w-1/4 md:block" width="720"
+        height="894">
+      <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="Sugar cube photo" class="hidden w-1/4 md:block"
+        width="720" height="894">
+    </div>
+  </main>
+
+  <footer class="bg-green-300 text-green-800 py-14 px-4 md:px-96">
+    <img src="images/logo.svg" alt="Logo" class="block m-auto mb-14 opacity-50 md:mb-6">
+    <nav class="mb-16">
+      <ul class="flex justify-around">
+        <li>About</li>
+        <li>Services</li>
+        <li>Projects</li>
+      </ul>
+    </nav>
+
+    <div class="flex justify-around px-12 mb-20">
+      <img src="images/icon-facebook.svg" alt="Facebook logo">
+      <img src="images/icon-instagram.svg" alt="Instagram logo">
+      <img src="images/icon-twitter.svg" alt="Twitter logo">
+      <img src="images/icon-pinterest.svg" alt="Pinterest logo">
+    </div>
+
+    <div class="text-xs">
+      <p>
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          rel="noopener noreferrer">Frontend Mentor</a>.<br>
+        Coded by <a href="#">Paupiette</a>.
+      </p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
 </body>
+
 </html>
